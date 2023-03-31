@@ -1,0 +1,20 @@
+extends ../layout
+
+block css
+
+block content
+    include ../includes/navbar
+    br
+    h4 Members List
+    br
+    .row 
+        - each member in members.data
+            .col-md-3
+                div(class='card', style="width: 18rem") 
+                    img(class='card-img-top', src="#{member.avatarUrl == null ? 'https://www.pngitem.com/pimgs/m/504-5040528_empty-profile-picture-png-transparent-png.png' : 'https://app.holaspirit.com/'+member.avatarUrl}")
+                .card-body 
+                    h5.card-title= member.displayName 
+                    p.card-text No available bio
+                    a(href='#', class='btn btn-primary') View Member
+        
+block javascript 

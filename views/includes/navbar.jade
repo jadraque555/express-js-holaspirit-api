@@ -1,0 +1,18 @@
+nav(class='navbar navbar-expand-lg navbar-dark bg-dark')
+    a(class="navbar-brand", href="/users") Holaspirit API
+    button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarText", aria-controls="navbarText", aria-expanded="false", aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+    
+    .collapse.navbar-collapse#navbarText
+        ul(class="navbar-nav mr-auto")
+            li(class="nav-item active")
+                a(class="nav-link", href="/users")
+                    span(class="sr-only") (current)
+            li(class="nav-item")
+                a(class="nav-link" href="/users") Get User Info
+            li(class="nav-item")
+                a(class="nav-link" href="/members") Get Members Data
+            li(class="nav-item")
+                a(class="nav-link" href="/members/create") Add Member
+        span(class="navbar-text")
+            a(class="btn btn-info", href='/users/logout') Logout

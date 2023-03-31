@@ -1,5 +1,23 @@
 extends layout
 
+block css
+ link(rel='stylesheet', href='/stylesheets/login.css')
+
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{title}
+  div(class='simple-login-container')
+    h2 Holaspirit
+    .row 
+      .col-md-12.form-group
+        input(type='email', class='form-control', id="email", placeholder='Email')
+    .row 
+      .col-md-12.form-group
+        input(type='password', class='form-control', id="password", placeholder='Password')
+    .row 
+      .col-md-12.form-group
+        input(type='button', class='btn btn-warning btn-block', id="btn-submit", value="Submit")
+
+
+block javascript 
+  script(src='/javascripts/login.js')

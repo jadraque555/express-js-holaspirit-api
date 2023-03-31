@@ -1,0 +1,15 @@
+extends layout
+
+block css
+//-  link(rel='stylesheet', href='/stylesheets/login.css')
+
+block content
+    include includes/navbar
+    br
+    br
+    h4 Name: #{user.linked.members[0].displayName}
+    h4 Email: #{user.data.email}
+    br
+    p Below are the data returned by the api for user info from holaspirit we can able manipulate this data and display as an html format
+    iframe(src='/json-response?apiType=user', width='100%', height='400px')
+block javascript 

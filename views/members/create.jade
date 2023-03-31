@@ -1,0 +1,34 @@
+extends ../layout
+
+block css
+
+block content
+    include ../includes/navbar
+    br
+    h4 Add Members
+    br
+    div(class="alert alert-danger #{errorMsg ? '' : 'd-none' }", role="alert") #{errorMsg ? errorMsg : errorMessage}
+    form(action="/members/post", method="POST")
+        div.form-group.row
+            label(for="firstname", class="col-sm-2 col-form-label") First Name
+            div.col-sm-10
+                input(type="text", class="form-control", name="firstname", placeholder="First Name")
+        div.form-group.row
+            label(for="lastname", class="col-sm-2 col-form-label") Last Name
+            div.col-sm-10
+                input(type="text", class="form-control", name="lastname", placeholder="Last Name")
+        div.form-group.row
+            label(for="email", class="col-sm-2 col-form-label") Email
+            div.col-sm-10
+                input(type="email", class="form-control", name="email", placeholder="Email")
+        div.form-group.row
+            label(for="lastname", class="col-sm-2 col-form-label") Phone
+            div.col-sm-10
+                input(type="text", class="form-control", name="phone", placeholder="Phone")
+        div.form-group.row
+            div.col-sm-12.d-flex.justify-content-end
+                input(type="submit", class="btn btn-primary", id="submit", value="Submit")
+ 
+block javascript 
+
+    
